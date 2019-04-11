@@ -1,5 +1,5 @@
 name: separated_column
-description: Flutter package for rendering separated Column children.
+description: Flutter package for rendering Column widget that injects the separator in between the children.
 version: 0.0.1
 author: Anis Alibegić <anis.alibegic@gmail.com>
 homepage: https://github.com/grandpa-guru/separated_column
