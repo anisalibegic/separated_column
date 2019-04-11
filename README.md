@@ -1,8 +1,7 @@
 # SeparatedColumn
 
-[<img alt="Pub" src="https://img.shields.io/pub/v/separated_column.svg">](https://pub.dartlang.org/packages/separated_column)
-
 Flutter package for rendering separated Column children.
+This package is also available on [pub](https://pub.dartlang.org/packages/separated_column).
 
 ## Usage
 

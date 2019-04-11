@@ -1,4 +1,8 @@
-## [1.0.0]
+## [1.0.0+2]
+
+* Minor changes.
+
+## [1.0.0+1]
 
 * Stable release.
 
