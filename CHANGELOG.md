@@ -1,3 +1,11 @@
+## [1.0.1+2]
+
+* Minor changes.
+
+## [1.0.1+1]
+
+* Added options to include outer separators.
+
 ## [1.0.0+2]
 
 * Minor changes.
