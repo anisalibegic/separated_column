@@ -1,3 +1,8 @@
+## [1.1.0-nullsafety.0]
+
+* **BREAKING**: Migrated to null safety
+* Upgrade Dart SDK constraints to `>=2.12.0-0 <3.0.0`
+
 ## [1.0.1+2]
 
 * Minor changes.

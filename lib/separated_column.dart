@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 
 class SeparatedColumn extends StatelessWidget {
   final List<Widget> children;
-  final TextBaseline textBaseline;
+  final TextBaseline? textBaseline;
   final bool includeOuterSeparators;
-  final TextDirection textDirection;
+  final TextDirection? textDirection;
   final MainAxisSize mainAxisSize;
   final VerticalDirection verticalDirection;
   final MainAxisAlignment mainAxisAlignment;
@@ -12,7 +12,7 @@ class SeparatedColumn extends StatelessWidget {
   final IndexedWidgetBuilder separatorBuilder;
 
   const SeparatedColumn({
-    Key key,
+    Key? key,
     this.textBaseline,
     this.textDirection,
     this.children = const <Widget>[],
@@ -21,17 +21,16 @@ class SeparatedColumn extends StatelessWidget {
     this.verticalDirection = VerticalDirection.down,
     this.mainAxisAlignment = MainAxisAlignment.start,
     this.crossAxisAlignment = CrossAxisAlignment.center,
-    @required this.separatorBuilder,
-  })  : assert(separatorBuilder != null),
-        super(key: key);
+    required this.separatorBuilder,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    final List<Widget> children = List<Widget>();
-    final int index = (this.includeOuterSeparators ?? false) ? 1 : 0;
+    final children = <Widget>[];
+    final index = this.includeOuterSeparators ? 1 : 0;
 
-    if (this.children != null && this.children.length > 0) {
-      if ((this.includeOuterSeparators ?? false)) {
+    if (this.children.length > 0) {
+      if (this.includeOuterSeparators) {
         children.add(separatorBuilder(context, 0));
       }
 
@@ -43,7 +42,7 @@ class SeparatedColumn extends StatelessWidget {
         }
       }
 
-      if ((this.includeOuterSeparators ?? false)) {
+      if (this.includeOuterSeparators) {
         children.add(separatorBuilder(context, this.children.length));
       }
     }
