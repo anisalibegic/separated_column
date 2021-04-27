@@ -1,6 +1,6 @@
 name: separated_column
 description: Flutter package for rendering Column widget that injects the separator in between the children.
-version: 1.1.0-nullsafety.0
+version: 2.0.0
 homepage: https://github.com/anisalibegic/separated_column
 
 environment:
