@@ -30,7 +30,7 @@ SeparatedColumn(
   separatorBuilder: (BuildContext context, int index) => Divider(),
 )
 ```
-is an equivalent of:
+Which is an equivalent of:
 
 ```dart
 Column(
