@@ -15,22 +15,47 @@ The only difference between `SeparatedColumn` and `Column` are `separatorBuilder
 ```dart
 SeparatedColumn(
   children: <Widget>[
-    ListTile(
-      title: Text("Item 1"),
-    ),
-    ListTile(
-      title: Text("Item 2"),
-    ),
-    ListTile(
-      title: Text("Item 3"),
-    ),
-    ListTile(
-      title: Text("Item 4"),
-    ),
+    Text("Item 1"),
+    Text("Item 2"),
+    Text("Item 3"),
+    Text("Item 4"),
+    Text("Item 5"),
+    Text("Item 6"),
+    Text("Item 7"),
+    Text("Item 8"),
+    Text("Item 9"),
+    Text("Item 10"),
   ],
-  separatorBuilder: (BuildContext context, int index) {
-    return Divider();
-  },
   includeOuterSeparators: true,
+  separatorBuilder: (BuildContext context, int index) => Divider(),
+)
+```
+is an equivalent of:
+
+```dart
+Column(
+  children: <Widget>[
+    Divider(),
+    Text("Item 1"),
+    Divider(),
+    Text("Item 2"),
+    Divider(),
+    Text("Item 3"),
+    Divider(),
+    Text("Item 4"),
+    Divider(),
+    Text("Item 5"),
+    Divider(),
+    Text("Item 6"),
+    Divider(),
+    Text("Item 7"),
+    Divider(),
+    Text("Item 8"),
+    Divider(),
+    Text("Item 9"),
+    Divider(),
+    Text("Item 10"),
+    Divider(),
+  ],
 )
 ```
