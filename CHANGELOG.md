@@ -1,3 +1,7 @@
+## [2.0.0]
+
+* Removed prerelease
+
 ## [1.1.0-nullsafety.0]
 
 * **BREAKING**: Migrated to null safety
