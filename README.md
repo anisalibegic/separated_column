@@ -1,9 +1,8 @@
-# SeparatedColumn
+# SeparatedColumn [![pub package](https://img.shields.io/pub/v/separated_column.svg?label=separated_column&color=blue)](https://pub.dartlang.org/packages/separated_column)
 
 Flutter package for rendering separated Column children.
-This package is also available on [pub](https://pub.dartlang.org/packages/separated_column).
 
-Also, give [separated_row](https://pub.dartlang.org/packages/separated_row) a try!
+Also, give [![pub package](https://img.shields.io/pub/v/separated_row.svg?label=separated_row&color=blue)](https://pub.dartlang.org/packages/separated_row) a try!
 
 ## Usage
 
