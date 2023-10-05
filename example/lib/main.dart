@@ -2,9 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:separated_column/separated_column.dart';
 
-void main() {
-  runApp(Application());
-}
+void main() => runApp(const Application());
 
 class Application extends StatelessWidget {
   const Application({Key? key}) : super(key: key);
@@ -12,37 +10,42 @@ class Application extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'SeparatedColumn',
-      home: HomePage('SeparatedColumn'),
+      title: 'Separated Column',
+      theme: ThemeData(useMaterial3: true),
+      home: const HomePage(),
     );
   }
 }
 
 class HomePage extends StatelessWidget {
-  final String title;
-
-  HomePage(this.title);
+  const HomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(title),
+        title: const Text('Separated Column'),
+        centerTitle: true,
       ),
       body: Center(
         child: SeparatedColumn(
-          children: <Widget>[
-            Text("Item 1"),
-            Text("Item 2"),
-            Text("Item 3"),
-          ],
           separatorBuilder: (BuildContext context, int index) {
-            return Divider();
+            return const Divider();
           },
           mainAxisSize: MainAxisSize.min,
           mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            for (int i = 0; i < 5; i++) _buildItem(i),
+          ],
         ),
       ),
+    );
+  }
+
+  Widget _buildItem(int index) {
+    return Text(
+      'Item $index',
+      style: const TextStyle(fontSize: 24),
     );
   }
 }
