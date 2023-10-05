@@ -37,7 +37,7 @@ class SeparatedColumn extends StatelessWidget {
       for (int i = 0; i < this.children.length; i++) {
         children.add(this.children[i]);
 
-        if (this.children.length - i != 1) {
+        if (i < this.children.length - 1) {
           children.add(separatorBuilder(context, i + index));
         }
       }
