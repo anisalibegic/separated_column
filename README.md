@@ -4,6 +4,8 @@ Flutter package for rendering separated Column children.
 
 Also, give [![pub package](https://img.shields.io/pub/v/separated_row.svg?label=separated_row&color=blue)](https://pub.dartlang.org/packages/separated_row) a try!
 
+![example.gif](https://raw.githubusercontent.com/anisalibegic/separated_column/master/screenshots/example.gif)
+
 ## Usage
 
 The only difference between `SeparatedColumn` and `Column` are `separatorBuilder` and `includeOuterSeparators` properties.
