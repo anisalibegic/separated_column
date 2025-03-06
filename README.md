@@ -11,7 +11,47 @@ Also, give [![pub package](https://img.shields.io/pub/v/separated_row.svg?label=
 The only difference between `SeparatedColumn` and `Column` are `separatorBuilder` and `includeOuterSeparators` properties.
 
 - `separatorBuilder` - Executed every time when there is a need to inject the separator
-- `outerSeparatorMode` - Separators can be added before the first element, after the last element, or both
+- `includeOuterSeparators` - Separators are added before the first and after the last element if true
+
+## Comparison
+
+<table>
+<tr>
+<th>Before</th>
+<th>After</th>
+</tr>
+<tr>
+<td valign="top">
+
+```dart
+Column(
+  children: <Widget>[
+    const Divider(),
+    Text("Item 1"),
+    const Divider(),
+    Text("Item 2"),
+    const Divider(),
+    Text("Item 3"),
+    const Divider(),
+    Text("Item 4"),
+    const Divider(),
+    Text("Item 5"),
+    const Divider(),
+    Text("Item 6"),
+    const Divider(),
+    Text("Item 7"),
+    const Divider(),
+    Text("Item 8"),
+    const Divider(),
+    Text("Item 9"),
+    const Divider(),
+    Text("Item 10"),
+    const Divider(),
+  ],
+)
+```
+</td>
+<td valign="top">
 
 ```dart
 SeparatedColumn(
@@ -28,35 +68,9 @@ SeparatedColumn(
     Text("Item 10"),
   ],
   outerSeparatorMode: OuterSeparatorMode.both,
-  separatorBuilder: (BuildContext context, int index) => Divider(),
+  separatorBuilder: (BuildContext context, int index) => const Divider(),
 )
 ```
-Which is an equivalent of:
-
-```dart
-Column(
-  children: <Widget>[
-    Divider(),
-    Text("Item 1"),
-    Divider(),
-    Text("Item 2"),
-    Divider(),
-    Text("Item 3"),
-    Divider(),
-    Text("Item 4"),
-    Divider(),
-    Text("Item 5"),
-    Divider(),
-    Text("Item 6"),
-    Divider(),
-    Text("Item 7"),
-    Divider(),
-    Text("Item 8"),
-    Divider(),
-    Text("Item 9"),
-    Divider(),
-    Text("Item 10"),
-    Divider(),
-  ],
-)
-```
+</td>
+</tr>
+</table>
