@@ -8,10 +8,10 @@ Also, give [![pub package](https://img.shields.io/pub/v/separated_row.svg?label=
 
 ## Usage
 
-The only difference between `SeparatedColumn` and `Column` are `separatorBuilder` and `includeOuterSeparators` properties.
+The only difference between `SeparatedColumn` and `Column` are `separatorBuilder` and `outerSeparatorMode` properties.
 
 - `separatorBuilder` - Executed every time when there is a need to inject the separator
-- `includeOuterSeparators` - Separators are added before the first and after the last element if true
+- `outerSeparatorMode` - Separators can be added before the first element, after the last element, or both
 
 ## Comparison
 
