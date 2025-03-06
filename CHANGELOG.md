@@ -1,3 +1,7 @@
+## [3.0.4]
+
+* Added outer separator mode
+
 ## [3.0.3]
 
 * Added example screenshot

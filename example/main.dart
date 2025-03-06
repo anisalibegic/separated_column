@@ -21,7 +21,7 @@ class Application extends StatelessWidget {
 class HomePage extends StatelessWidget {
   final String title;
 
-  HomePage(this.title);
+  const HomePage(this.title, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -31,16 +31,14 @@ class HomePage extends StatelessWidget {
       ),
       body: Center(
         child: SeparatedColumn(
+          mainAxisSize: MainAxisSize.min,
+          mainAxisAlignment: MainAxisAlignment.center,
+          separatorBuilder: (BuildContext context, int index) => const Divider(),
           children: <Widget>[
             Text("Item 1"),
             Text("Item 2"),
             Text("Item 3"),
           ],
-          separatorBuilder: (BuildContext context, int index) {
-            return Divider();
-          },
-          mainAxisSize: MainAxisSize.min,
-          mainAxisAlignment: MainAxisAlignment.center,
         ),
       ),
     );

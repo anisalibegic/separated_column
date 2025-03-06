@@ -11,7 +11,7 @@ Also, give [![pub package](https://img.shields.io/pub/v/separated_row.svg?label=
 The only difference between `SeparatedColumn` and `Column` are `separatorBuilder` and `includeOuterSeparators` properties.
 
 - `separatorBuilder` - Executed every time when there is a need to inject the separator
-- `includeOuterSeparators` - Separators are added before the first and after the last element if true
+- `outerSeparatorMode` - Separators can be added before the first element, after the last element, or both
 
 ```dart
 SeparatedColumn(
@@ -27,7 +27,7 @@ SeparatedColumn(
     Text("Item 9"),
     Text("Item 10"),
   ],
-  includeOuterSeparators: true,
+  outerSeparatorMode: OuterSeparatorMode.both,
   separatorBuilder: (BuildContext context, int index) => Divider(),
 )
 ```
